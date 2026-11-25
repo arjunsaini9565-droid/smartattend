@@ -1,0 +1,23 @@
+{
+  "name": "smartattend-ai",
+  "version": "1.0.0",
+  "description": "SmartAttend AI - automated attendance management with facial recognition",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "dev": "node --no-warnings --watch server/index.js",
+    "seed": "node --no-warnings server/lib/seed.js",
+    "seed:reset": "node --no-warnings server/lib/seed.js --reset",
+    "build": "node scripts/build.js",
+    "watch": "node scripts/build.js --watch",
+    "vendor:face": "node scripts/fetch-face-assets.js",
+    "test": "node --no-warnings --test test/api.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
